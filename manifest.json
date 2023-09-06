@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Auto Typer",
+    "version": "1.0",
+    "description": "Automatically types 'awesome' on YouTube video pages",
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "48": "glitch-icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "glitch-icon.png",
+        "48": "glitch-icon.png",
+        "128": "glitch-icon.png"
+      }
+    }
+  }
+  
